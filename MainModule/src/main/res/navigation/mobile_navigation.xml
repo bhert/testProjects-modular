@@ -23,5 +23,8 @@
             android:id="@+id/navigation_myProfile"
             android:name="com.albert.profilemodule.ProfileFragment"
             android:label="@string/title_profile" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="myapp://main_module/" />
     </navigation>
 </navigation>

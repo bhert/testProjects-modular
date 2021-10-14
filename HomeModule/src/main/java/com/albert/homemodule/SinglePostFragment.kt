@@ -52,6 +52,10 @@ class SinglePostFragment : Fragment() {
         binding.textContent.text = args.details
         binding.textUserName.text = args.content
         binding.textUserName.setOnClickListener {
+            val request = NavDeepLinkRequest.Builder
+                .fromUri("android-app://com.albert.profilemodule/navigation_myProfile".toUri())
+                .build()
+            findNavController().navigate(request)
         }
         return binding.root
     }

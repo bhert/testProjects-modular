@@ -1,0 +1,3 @@
+class LogUtil {
+//    fun debug()
+}

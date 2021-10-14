@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.albert.homemodule.HomeFragment"
+        android:label="@string/title_home"/>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.albert.mymodular2.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <include app:graph="@navigation/home_navigation" />
+    <navigation android:id="@+id/navigation_profile"
+        app:startDestination="@id/navigation_myProfile">
+        <fragment
+            android:id="@+id/navigation_myProfile"
+            android:name="com.albert.profilemodule.ProfileFragment"
+            android:label="@string/title_profile" />
+    </navigation>
+</navigation>
